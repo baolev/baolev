@@ -13,53 +13,64 @@ import (
 	"пакет для тестирования внутри проекта tests"
 )
 
-type "Сертификаты"_Suite struct {
+type Функционал_Suite struct {
 	suite.Suite
 	setup *tests.Setup
 	s1    uuid.UUID
 }
 
-func Test_"Сертификаты"_Suite(t *testing.T) {
-	suite.Run(t, new("Сертификаты"_Suite))
+func Test_Функционал_Suite(t *testing.T) {
+	suite.Run(t, new(Функционал_Suite))
 }
-func (s *"Сертификаты"_Suite) SetupSuite() {
-	err := setup.MigrationsExecute([]string{"false"}, "Адрес к запуску файла SQL для создания сертификата с необходимыми условиями")
+
+func (s *Функционал_Suite) TearDownSuite() {
+	err := setup.миграция([]string{"SQL что удаляет записи из бд после выполнения теста"}, "false")
+	require.NoError(s.T(), err)
+	err = setup.удаление по гуид([]string{"68d9b29d-314f-46d0-ac1c-3150e20b93f1"})
 	require.NoError(s.T(), err)
 }
 
-// 1. Отображение Сертификата
 
-func (s *"Сертификаты"_Suite) Test_01() {
-	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+// 1. Тестовый пример
+func (s *Функционал_Suite) Test_1() {
+
+	err := setup.миграция([]string{"SQL создания миграции"}, "false")
+	require.NoError(s.T(), err, "Failed to execute migrations")
+
+	ctx, cancel, err := setup.TestPrecondition(tests.AccessToken-номер пользователя, []string{"false"}, "false")
+	require.NoError(s.T(), err, "Failed to setup test precondition")
 	defer cancel()
-	ctx = metadata.AppendToOutgoingContext(ctx, "Authorization", "Bearer "+tests.AccessToken-"Номер пользователя")
-	
-	//Запрос
-	actResp, err := команда отправки запроса сертификата (ctx, &pb.получить_сертификат{
-		Filter: &pb.получить_сертификат Request_Filter{
-			Условие: 1,
-			Для сертификата-1: []*pb.UUID{
-				{
-					Value: "8cd34927-9b23-4e4c-a486-35327c6799a7",
-				},
-			},
-			Для сертификата-2: &pb.UUID{Value: "b51952aa-11ca-456a-9d68-263a86c77be8"},
+
+	request := &pb.Функционал_Request{
+		GUID: &pb.UUID{
+			Value: "2701ed50-ec35-4abb-97f5-f4a0d8a1ac78",
 		},
-	})
-	
-	//Ожидаемый результат
-	require.NoError(s.T(), err)
-	expResp := pb.получить_сертификат Responce{
-		Сертификаты: []*pb.Сертификаты{
+		Данные 1: &pb.UUID{
+			Value: "1b96f120-98ae-4ed3-84ef-845989e0073b",
+		},
+		Наименования: []*pb.Инфа о продукте{
 			{
-				Обьект Гуид: &pb.UUID{Value: "1c95a08a-25ae-4c84-81ce-f01961fc0565"},
-				Name:           "Тестовое имя-1",
-				Обьект код:       "1955-170",
+				Инфа 1: "1",
+				инфа 2: "2",
+				инфа 3: "3",
 			},
 		},
 	}
 
-	require.Equal(s.T(), actResp.Сертификат[0].Обьект код, expResp.Сертификат[0].Обьект Гуид)
-	require.Equal(s.T(), actResp.Сертификат[0].Name, expResp.Сертификат[0].Name)
-	require.Equal(s.T(), actResp.Сертификат[0].Обьект код, expResp.Сертификат[0].Обьект Гуид)
+	_, err = setup.GRPCClient.OrderClient.Функционал(ctx, request)
+	require.Error(s.T(), err, "Сообщение об ошибке"
+	require.Contains(s.T(), err.Error(), "Сообщение об ошибке", 
+	"Error message does not match expected")
+
+	sqlReq := `
+		SELECT COUNT(*) 
+		FROM таблицы 1 
+		WHERE "инфа 1" = '1' AND
+			  "гуид 1" = '4da05ac3-1ea5-4640-8e66-a16d5a9a8658' AND
+			  "гуид 2" = '2c97a922-f91e-4f46-ac06-3784ebbf6b69' AND
+			  "инфа 2" = '2' AND
+			  "инфа 3" = '3'
+	`
+	err = setup.CompareResult(0, sqlReq)
+	require.NoError(s.T(), err, "Failed to compare result")
 }

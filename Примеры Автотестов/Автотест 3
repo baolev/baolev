@@ -1,0 +1,53 @@
+package логика-1
+
+import (
+	"context"
+	"fmt"
+	uuid "github.com/пакет-1 для uuid"
+	"github.com/пакет тестифай/require"
+	"github.com/пакет тестифай/suite"
+	"google.golang.org/grpc/metadata"
+	"strconv"
+	"testing"
+	"time"
+	"пакет для тестирования внутри проекта tests"
+)
+
+// 2.Тестовый пример -2
+func (s *функционал-2) Test_2() {
+	ctx, cancel, err := setup.TestPrecondition(tests.AccessToken-номер пользователя, []string{"SQL Создания миграции"}, "false")
+	require.NoError(s.T(), err)
+	defer cancel()
+	actResp, err := setup.GRPCClient.OrderClient.функционал-2(ctx, &pb.функционал-2_Request{
+		инфа-1: &pb.UUID{Value: "65ff169f-9864-4215-8ce3-75925d28de23"},
+	})
+	require.NoError(s.T(), err)
+	expResp := pb.функционал-2_Responce{
+		инфа-2: []*pb.инфа-1{
+			{
+
+				инфа-3: &pb.инфа-4{
+					Guid: &pb.UUID{
+						Value: "75f270bd-c8ed-4f7b-bf9d-4026b9eed90f",
+					},
+					Name: "Пробник Денежный",
+				},
+				инфа-5: "1",
+				инфа-6: "2",
+			},
+			{
+
+				инфа-3: &pb.инфа-4{
+					Guid: &pb.UUID{
+						Value: "53b8c598-b6c9-45c6-b326-e0643dd01380",
+					},
+					Name: "Пробник Денежный2",
+				},
+				инфа-5: "3",
+				инфа-6: "4",
+			},
+		},
+	}
+
+	require.Equal(s.T(), expResp.String(), actResp.String())
+}
