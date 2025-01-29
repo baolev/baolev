@@ -10,9 +10,9 @@
 
 
 <h3 align="left">👩‍💻  Обо мне</h3>
- Я Инженер по качеству. Учился как самоучка. Прошел и сдал курсы в Epam.com. Специализируюсь на функциональном тестировании.
+ Я Инженер по качеству. Учился как самоучка. Прошел и сдал курсы в Epam.com. Специализируюсь на функциональном тестировании. Ищу для себя интересный проект и дружную команду что-бы развиваться в сторону автотестирования. Сейчас учусь работать с Selenium Python, Html Css и JS для создания и работы с фронтовыми автотестами.
 
-<br>- 🔭Умею работать и в команде и в одиночку. <br>- 📚 Преимущественно работал с веб-приложениями</p>
+<br>- 🔭Стану как частью команды, так и начну тестирование с 0. <br>- 📚 Преимущественно работал с веб-приложениями</p>
 # 🍵 Проекты + работа
 <br>📁 [Выполненые тестовые задания](https://github.com/baolev/Test-tasks.git)<br>
 
@@ -25,10 +25,7 @@
 <p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="36" height="36"/>  </a> <a href="https://www.elastic.co" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" alt="elasticsearch" width="36" height="36"/> </a> <a href="https://www.jenkins.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="36" height="36"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="36" height="36"/> </a> <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="36" height="36"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="36" height="36"/> </a> </p>
 
 
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=baolev&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=baolev&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=baolev&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+
 
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
