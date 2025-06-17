@@ -28,16 +28,19 @@
 
 ## 💻 Мой стек:
 
+## 💻 Мой стек:
+
 <p align="left">
   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" alt="Python"/>
   <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="36" alt="Postman"/>
-  <img src="https://www.vectorlogo.zone/logos/seleniumhq/seleniumhq-icon.svg" width="36" alt="Selenium"/>
-  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" alt="Git"/>
+  <img src="https://raw.githubusercontent.com/SeleniumHQ/selenium/main/common/src/web/images/selenium_logo_square_green.png" width="36" alt="Selenium"/>
+  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" width="36" alt="Git"/>
   <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" width="36" alt="Jenkins"/>
   <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" width="36" alt="Docker"/>
   <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" width="36" alt="Bash"/>
   <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" width="36" alt="RabbitMQ"/>
 </p>
+
 
 ---
 
